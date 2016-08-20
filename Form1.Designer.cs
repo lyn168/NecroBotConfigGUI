@@ -59,21 +59,21 @@
             this.La = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.sniper_openpanel = new System.Windows.Forms.Panel();
             this.ms = new System.Windows.Forms.Label();
             this.sniper_delay = new System.Windows.Forms.TextBox();
             this.sniper_delay_text = new System.Windows.Forms.Label();
             this.sniper_server_list = new System.Windows.Forms.CheckedListBox();
             this.info = new System.Windows.Forms.Label();
-            this.sniper_panel = new System.Windows.Forms.Panel();
-            this.sniper_close = new System.Windows.Forms.RadioButton();
-            this.sniper_open = new System.Windows.Forms.RadioButton();
-            this.sniper_mode = new System.Windows.Forms.Label();
             this.save = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
             this.donate = new System.Windows.Forms.PictureBox();
             this.version = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.snpanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.login.SuspendLayout();
@@ -84,9 +84,9 @@
             this.panel1.SuspendLayout();
             this.location.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.sniper_openpanel.SuspendLayout();
-            this.sniper_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donate)).BeginInit();
+            this.snpanel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -411,9 +411,9 @@
             // 
             // tabPage4
             // 
-            this.tabPage4.Controls.Add(this.sniper_openpanel);
-            this.tabPage4.Controls.Add(this.sniper_panel);
-            this.tabPage4.Controls.Add(this.sniper_mode);
+            this.tabPage4.Controls.Add(this.panel3);
+            this.tabPage4.Controls.Add(this.label7);
+            this.tabPage4.Controls.Add(this.snpanel);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(301, 269);
@@ -421,24 +421,11 @@
             this.tabPage4.Text = "狙擊模式";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // sniper_openpanel
-            // 
-            this.sniper_openpanel.Controls.Add(this.ms);
-            this.sniper_openpanel.Controls.Add(this.sniper_delay);
-            this.sniper_openpanel.Controls.Add(this.sniper_delay_text);
-            this.sniper_openpanel.Controls.Add(this.sniper_server_list);
-            this.sniper_openpanel.Controls.Add(this.info);
-            this.sniper_openpanel.Enabled = false;
-            this.sniper_openpanel.Location = new System.Drawing.Point(3, 48);
-            this.sniper_openpanel.Name = "sniper_openpanel";
-            this.sniper_openpanel.Size = new System.Drawing.Size(295, 218);
-            this.sniper_openpanel.TabIndex = 14;
-            // 
             // ms
             // 
             this.ms.AutoSize = true;
             this.ms.Font = new System.Drawing.Font("微軟正黑體 Light", 9F);
-            this.ms.Location = new System.Drawing.Point(219, 162);
+            this.ms.Location = new System.Drawing.Point(241, 144);
             this.ms.Name = "ms";
             this.ms.Size = new System.Drawing.Size(32, 16);
             this.ms.TabIndex = 13;
@@ -447,7 +434,7 @@
             // sniper_delay
             // 
             this.sniper_delay.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.sniper_delay.Location = new System.Drawing.Point(95, 159);
+            this.sniper_delay.Location = new System.Drawing.Point(110, 140);
             this.sniper_delay.Margin = new System.Windows.Forms.Padding(8);
             this.sniper_delay.Name = "sniper_delay";
             this.sniper_delay.Size = new System.Drawing.Size(120, 25);
@@ -457,7 +444,7 @@
             // 
             this.sniper_delay_text.AutoSize = true;
             this.sniper_delay_text.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.sniper_delay_text.Location = new System.Drawing.Point(16, 162);
+            this.sniper_delay_text.Location = new System.Drawing.Point(31, 143);
             this.sniper_delay_text.Name = "sniper_delay_text";
             this.sniper_delay_text.Size = new System.Drawing.Size(73, 17);
             this.sniper_delay_text.TabIndex = 11;
@@ -469,70 +456,26 @@
             this.sniper_server_list.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.sniper_server_list.FormattingEnabled = true;
             this.sniper_server_list.Items.AddRange(new object[] {
-            "PogoLocationFeeder",
             "Pokezz(全部)",
             "Pokezz(已驗證)",
             "PokeSnipers",
             "PokeWatchers",
             "Skiplagged"});
-            this.sniper_server_list.Location = new System.Drawing.Point(95, 21);
+            this.sniper_server_list.Location = new System.Drawing.Point(110, 27);
             this.sniper_server_list.Name = "sniper_server_list";
-            this.sniper_server_list.Size = new System.Drawing.Size(164, 112);
+            this.sniper_server_list.Size = new System.Drawing.Size(164, 94);
             this.sniper_server_list.TabIndex = 6;
             // 
             // info
             // 
             this.info.AutoSize = true;
             this.info.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.info.Location = new System.Drawing.Point(16, 21);
+            this.info.Location = new System.Drawing.Point(31, 27);
             this.info.Margin = new System.Windows.Forms.Padding(3);
             this.info.Name = "info";
             this.info.Size = new System.Drawing.Size(73, 17);
             this.info.TabIndex = 5;
             this.info.Text = "資料來源：";
-            // 
-            // sniper_panel
-            // 
-            this.sniper_panel.Controls.Add(this.sniper_close);
-            this.sniper_panel.Controls.Add(this.sniper_open);
-            this.sniper_panel.Location = new System.Drawing.Point(98, 18);
-            this.sniper_panel.Name = "sniper_panel";
-            this.sniper_panel.Size = new System.Drawing.Size(104, 24);
-            this.sniper_panel.TabIndex = 13;
-            // 
-            // sniper_close
-            // 
-            this.sniper_close.AutoSize = true;
-            this.sniper_close.Checked = true;
-            this.sniper_close.Location = new System.Drawing.Point(56, 4);
-            this.sniper_close.Name = "sniper_close";
-            this.sniper_close.Size = new System.Drawing.Size(47, 16);
-            this.sniper_close.TabIndex = 1;
-            this.sniper_close.TabStop = true;
-            this.sniper_close.Text = "關閉";
-            this.sniper_close.UseVisualStyleBackColor = true;
-            this.sniper_close.CheckedChanged += new System.EventHandler(this.sniper_close_CheckedChanged);
-            // 
-            // sniper_open
-            // 
-            this.sniper_open.AutoSize = true;
-            this.sniper_open.Location = new System.Drawing.Point(3, 4);
-            this.sniper_open.Name = "sniper_open";
-            this.sniper_open.Size = new System.Drawing.Size(47, 16);
-            this.sniper_open.TabIndex = 0;
-            this.sniper_open.Text = "開啟";
-            this.sniper_open.UseVisualStyleBackColor = true;
-            this.sniper_open.CheckedChanged += new System.EventHandler(this.sniper_open_CheckedChanged);
-            // 
-            // sniper_mode
-            // 
-            this.sniper_mode.AutoSize = true;
-            this.sniper_mode.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.sniper_mode.Location = new System.Drawing.Point(19, 21);
-            this.sniper_mode.Name = "sniper_mode";
-            this.sniper_mode.Size = new System.Drawing.Size(73, 17);
-            this.sniper_mode.TabIndex = 12;
-            this.sniper_mode.Text = "狙擊模式：";
             // 
             // save
             // 
@@ -586,6 +529,59 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "適用版本：NecroBot v0.9.3";
             // 
+            // snpanel
+            // 
+            this.snpanel.Controls.Add(this.sniper_delay);
+            this.snpanel.Controls.Add(this.sniper_server_list);
+            this.snpanel.Controls.Add(this.info);
+            this.snpanel.Controls.Add(this.ms);
+            this.snpanel.Controls.Add(this.sniper_delay_text);
+            this.snpanel.Location = new System.Drawing.Point(3, 52);
+            this.snpanel.Name = "snpanel";
+            this.snpanel.Size = new System.Drawing.Size(295, 214);
+            this.snpanel.TabIndex = 14;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Controls.Add(this.radioButton2);
+            this.panel3.Location = new System.Drawing.Point(113, 15);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(104, 24);
+            this.panel3.TabIndex = 16;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
+            this.radioButton1.Location = new System.Drawing.Point(56, 4);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(47, 16);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "關閉";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(3, 4);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(47, 16);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.Text = "開啟";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.Location = new System.Drawing.Point(34, 18);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(73, 17);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "狙擊模式：";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -619,11 +615,11 @@
             this.location.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            this.sniper_openpanel.ResumeLayout(false);
-            this.sniper_openpanel.PerformLayout();
-            this.sniper_panel.ResumeLayout(false);
-            this.sniper_panel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.donate)).EndInit();
+            this.snpanel.ResumeLayout(false);
+            this.snpanel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -653,11 +649,6 @@
         private System.Windows.Forms.Label version;
         private System.Windows.Forms.Label info;
         private System.Windows.Forms.CheckedListBox sniper_server_list;
-        private System.Windows.Forms.Panel sniper_openpanel;
-        private System.Windows.Forms.Panel sniper_panel;
-        private System.Windows.Forms.RadioButton sniper_close;
-        private System.Windows.Forms.RadioButton sniper_open;
-        private System.Windows.Forms.Label sniper_mode;
         private System.Windows.Forms.TextBox sniper_delay;
         private System.Windows.Forms.Label sniper_delay_text;
         private System.Windows.Forms.Label ms;
@@ -676,6 +667,11 @@
         private System.Windows.Forms.NumericUpDown speedvalue;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel snpanel;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Label label7;
     }
 }
 

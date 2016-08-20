@@ -66,48 +66,34 @@ namespace NecroBot_Config_GUI
                 speedvalue.Value = decimal.Parse(obj_config["LocationSettings"]["WalkingSpeedInKilometerPerHour"].ToString());
                 #endregion
                 #region 狙擊模式
-                bool checkstatus = false;
                 if (bool.Parse(obj_config["SnipingSettings"]["UseSnipeLocationServer"].ToString()))
                 {
-                    sniper_server_list.SetItemChecked(0, true);
-                    checkstatus = true;
+                    
                 }
                 if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokezz"].ToString()))
                 {
-                    sniper_server_list.SetItemChecked(1, true);
-                    checkstatus = true;
-                }
-                if (bool.Parse(obj_config["SnipingSettings"]["GetOnlyVerifiedSniperInfoFromPokezz"].ToString()))
-                {
-                    sniper_server_list.SetItemChecked(2, true);
-                    checkstatus = true;
-                }
-                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokeSnipers"].ToString()))
-                {
-                    sniper_server_list.SetItemChecked(3, true);
-                    checkstatus = true;
-                }
-                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokeWatchers"].ToString()))
-                {
-                    sniper_server_list.SetItemChecked(4, true);
-                    checkstatus = true;
-                }
-                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromSkiplagged"].ToString()))
-                {
-                    sniper_server_list.SetItemChecked(5, true);
-                    checkstatus = true;
-                }
-                if (checkstatus)
-                {
-                    sniper_open.Checked = true;
-                    sniper_openpanel.Enabled = true;
+                    snpanel.Enabled = true;
                 }
                 else
                 {
-                    sniper_close.Checked = true;
-                    sniper_openpanel.Enabled = false;
+                    snpanel.Enabled = false;
                 }
-                checkstatus = false;
+                if (bool.Parse(obj_config["SnipingSettings"]["GetOnlyVerifiedSniperInfoFromPokezz"].ToString()))
+                {
+                    sniper_server_list.SetItemChecked(1, true);
+                }
+                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokeSnipers"].ToString()))
+                {
+                    sniper_server_list.SetItemChecked(2, true);
+                }
+                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokeWatchers"].ToString()))
+                {
+                    sniper_server_list.SetItemChecked(3, true);
+                }
+                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromSkiplagged"].ToString()))
+                {
+                    sniper_server_list.SetItemChecked(4, true);
+                }
                 sniper_delay.Text = obj_config["SnipingSettings"]["MinDelayBetweenSnipes"].ToString();
                 #endregion
             }
@@ -137,16 +123,9 @@ namespace NecroBot_Config_GUI
             }   
         }
 
-        private void sniper_open_CheckedChanged(object sender, EventArgs e)
-        {
-            sniper_openpanel.Enabled = true;
-        }
+        
 
-        private void sniper_close_CheckedChanged(object sender, EventArgs e)
-        {
-            sniper_openpanel.Enabled = false;
-            
-        }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {   //基本設定
