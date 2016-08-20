@@ -68,15 +68,15 @@ namespace NecroBot_Config_GUI
                 #region 狙擊模式
                 if (bool.Parse(obj_config["SnipingSettings"]["UseSnipeLocationServer"].ToString()))
                 {
-                    
-                }
-                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokezz"].ToString()))
-                {
                     snpanel.Enabled = true;
                 }
                 else
                 {
                     snpanel.Enabled = false;
+                }
+                if (bool.Parse(obj_config["SnipingSettings"]["GetSniperInfoFromPokezz"].ToString()))
+                {
+                    sniper_server_list.SetItemChecked(0, true);
                 }
                 if (bool.Parse(obj_config["SnipingSettings"]["GetOnlyVerifiedSniperInfoFromPokezz"].ToString()))
                 {
@@ -123,9 +123,15 @@ namespace NecroBot_Config_GUI
             }   
         }
 
-        
+        private void sn_open_CheckedChanged(object sender, EventArgs e)
+        {
+            snpanel.Enabled = true;
+        }
 
-        
+        private void sn_close_CheckedChanged(object sender, EventArgs e)
+        {
+            snpanel.Enabled = false;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {   //基本設定
@@ -164,12 +170,19 @@ namespace NecroBot_Config_GUI
             }
             obj_config["LocationSettings"]["WalkingSpeedInKilometerPerHour"] = speedvalue.Value;
             //狙擊模式
-            obj_config["SnipingSettings"]["UseSnipeLocationServer"] = sniper_server_list.GetItemChecked(0);
-            obj_config["SnipingSettings"]["GetSniperInfoFromPokezz"] = sniper_server_list.GetItemChecked(1);
-            obj_config["SnipingSettings"]["GetOnlyVerifiedSniperInfoFromPokezz"] = sniper_server_list.GetItemChecked(2);
-            obj_config["SnipingSettings"]["GetSniperInfoFromPokeSnipers"] = sniper_server_list.GetItemChecked(3);
-            obj_config["SnipingSettings"]["GetSniperInfoFromPokeWatchers"] = sniper_server_list.GetItemChecked(4);
-            obj_config["SnipingSettings"]["GetSniperInfoFromSkiplagged"] = sniper_server_list.GetItemChecked(5);
+            if(sn_open.Checked == true)
+            {
+                obj_config["SnipingSettings"]["UseSnipeLocationServer"] = true;
+            }
+            else
+            {
+                obj_config["SnipingSettings"]["UseSnipeLocationServer"] = false;
+            }
+            obj_config["SnipingSettings"]["GetSniperInfoFromPokezz"] = sniper_server_list.GetItemChecked(0);
+            obj_config["SnipingSettings"]["GetOnlyVerifiedSniperInfoFromPokezz"] = sniper_server_list.GetItemChecked(1);
+            obj_config["SnipingSettings"]["GetSniperInfoFromPokeSnipers"] = sniper_server_list.GetItemChecked(2);
+            obj_config["SnipingSettings"]["GetSniperInfoFromPokeWatchers"] = sniper_server_list.GetItemChecked(3);
+            obj_config["SnipingSettings"]["GetSniperInfoFromSkiplagged"] = sniper_server_list.GetItemChecked(4);
             obj_config["SnipingSettings"]["MinDelayBetweenSnipes"] = sniper_delay.Text;
 
             using (StreamWriter writer_a = new StreamWriter(src_auth))
