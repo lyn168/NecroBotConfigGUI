@@ -1,0 +1,11 @@
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\bin\Debug\NecroBot Config GUI.exe.config
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\bin\Debug\NecroBot Config GUI.exe
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\bin\Debug\NecroBot Config GUI.pdb
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot_Config_GUI.Form1.resources
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot_Config_GUI.Properties.Resources.resources
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot Config GUI.csproj.GenerateResource.Cache
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot Config GUI.exe
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot Config GUI.pdb
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\tedliou\Desktop\NecroBot Config GUI\NecroBot Config GUI\obj\Debug\NecroBot Config GUI.csprojResolveAssemblyReference.cache
